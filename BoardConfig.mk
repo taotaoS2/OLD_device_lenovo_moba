@@ -62,7 +62,8 @@ BOARD_KERNEL_CMDLINE := \
     msm_rtb.filter=0x237 \
     service_locator.enable=1 \
     androidboot.usbcontroller=a600000.dwc3 \
-    swiotlb=2048 loop.max_part=7 \
+    swiotlb=2048 \
+    loop.max_part=7 \
     cgroup.memory=nokmem,nosocket \
     reboot=panic_warm \
     androidboot.selinux=permissive
