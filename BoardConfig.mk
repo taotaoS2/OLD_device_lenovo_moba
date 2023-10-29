@@ -131,6 +131,12 @@ BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := \
     product \
     odm
 
+# System root
+BOARD_SUPPRESS_SECURE_ERASE := true
+
+# Metadata
+BOARD_USES_METADATA_PARTITION := true
+
 # Platform
 TARGET_BOARD_PLATFORM := kona
 BOARD_USES_QCOM_HARDWARE := true
