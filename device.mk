@@ -8,7 +8,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # APEX
-PRODUCT_COMPRESSED_APEX := false
+OVERRIDE_TARGET_FLATTEN_APEX := true
 
 # fastbootd
 PRODUCT_PACKAGES += \
