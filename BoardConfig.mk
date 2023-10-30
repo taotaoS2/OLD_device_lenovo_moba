@@ -102,7 +102,16 @@ BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
-#BOARD_ROOT_EXTRA_FOLDERS += metadata
+
+# Root
+BOARD_SUPPRESS_SECURE_ERASE := true
+BOARD_ROOT_EXTRA_FOLDERS := \
+    bt_firmware \
+    firmware \
+    metadata \
+    cache \
+    persist \
+    dsp
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144
