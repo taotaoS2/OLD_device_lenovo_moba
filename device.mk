@@ -15,11 +15,9 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
     fastbootd
 
-# Crypto
+# Keymaster
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0.vendor \
-    android.hardware.keymaster@4.1.vendor \
-    android.hardware.keymaster@4.0.vendor
+    android.hardware.keymaster@4.1.vendor
 
 # Permissions
 PRODUCT_COPY_FILES += \
