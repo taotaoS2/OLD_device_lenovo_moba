@@ -10,14 +10,23 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # APEX
 OVERRIDE_TARGET_FLATTEN_APEX := true
 
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2340
+TARGET_SCREEN_WIDTH := 1080
+
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
     fastbootd
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0.vendor
+
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
+
 # Keystore
 PRODUCT_PACKAGES += \
     android.system.keystore2
