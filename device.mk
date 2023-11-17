@@ -18,6 +18,9 @@ PRODUCT_PACKAGES += \
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
+# Keystore
+PRODUCT_PACKAGES += \
+    android.system.keystore2
 
 # Permissions
 PRODUCT_COPY_FILES += \
