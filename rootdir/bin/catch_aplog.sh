@@ -112,6 +112,10 @@ if [ -e /d/le_rkm ]; then
     Log "Collecting sbl1_mesg done"
 fi
 
+# add for reboot log need by bsp
+PSTORE_DIR=/sys/fs/pstore
+[ -d $PSTORE_DIR ] && cp -a $PSTORE_DIR/ $CURLOG_DIR/pstore
+
 BL_LOGFILE=$CURLOG_DIR/BL
 date  >> $BL_LOGFILE
 echo "" >> $BL_LOGFILE

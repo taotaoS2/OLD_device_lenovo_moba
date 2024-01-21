@@ -6,44 +6,8 @@
 
 // Init scripts
 sh_binary {
-    name: "auto_save_stop_aplog.sh",
-    src: "bin/auto_save_stop_aplog.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "stop_aplog.sh",
-    src: "bin/stop_aplog.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.qcom.efs.sync.sh",
-    src: "bin/init.qcom.efs.sync.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "install-recovery.sh",
-    src: "bin/install-recovery.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "qca6234-service.sh",
-    src: "bin/qca6234-service.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.qcom.coex.sh",
-    src: "bin/init.qcom.coex.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "kernellog.sh",
-    src: "bin/kernellog.sh",
+    name: "init.qcom.sh",
+    src: "bin/init.qcom.sh",
     vendor: true,
 }
 
@@ -54,8 +18,44 @@ sh_binary {
 }
 
 sh_binary {
-    name: "init.qti.qcv.sh",
-    src: "bin/init.qti.qcv.sh",
+    name: "clean_aplog.sh",
+    src: "bin/clean_aplog.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.class_main.sh",
+    src: "bin/init.class_main.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "modemlog.sh",
+    src: "bin/modemlog.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.post_boot.sh",
+    src: "bin/init.qcom.post_boot.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "qseelog.sh",
+    src: "bin/qseelog.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "kernellog.sh",
+    src: "bin/kernellog.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "stop_aplog.sh",
+    src: "bin/stop_aplog.sh",
     vendor: true,
 }
 
@@ -66,14 +66,92 @@ sh_binary {
 }
 
 sh_binary {
-    name: "init.qcom.class_core.sh",
-    src: "bin/init.qcom.class_core.sh",
+    name: "batterylog.sh",
+    src: "bin/batterylog.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.qcv.sh",
+    src: "bin/init.qti.qcv.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.crda.sh",
+    src: "bin/init.crda.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.media.sh",
+    src: "bin/init.qti.media.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "auto_save_stop_aplog.sh",
+    src: "bin/auto_save_stop_aplog.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.coex.sh",
+    src: "bin/init.qcom.coex.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.mdm.sh",
+    src: "bin/init.mdm.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.dcvs.sh",
+    src: "bin/init.qti.dcvs.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "copy_aplog.sh",
+    src: "bin/copy_aplog.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.efs.sync.sh",
+    src: "bin/init.qcom.efs.sync.sh",
     vendor: true,
 }
 
 sh_binary {
     name: "catch_aplog.sh",
     src: "bin/catch_aplog.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.sensors.sh",
+    src: "bin/init.qcom.sensors.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.class_core.sh",
+    src: "bin/init.qcom.class_core.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "batterylogcontrol.sh",
+    src: "bin/batterylogcontrol.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "qca6234-service.sh",
+    src: "bin/qca6234-service.sh",
     vendor: true,
 }
 
@@ -90,32 +168,8 @@ sh_binary {
 }
 
 sh_binary {
-    name: "init.qti.dcvs.sh",
-    src: "bin/init.qti.dcvs.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "qseelog.sh",
-    src: "bin/qseelog.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.crda.sh",
-    src: "bin/init.crda.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "clean_aplog.sh",
-    src: "bin/clean_aplog.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.qcom.sh",
-    src: "bin/init.qcom.sh",
+    name: "aplog.sh",
+    src: "bin/aplog.sh",
     vendor: true,
 }
 
@@ -126,69 +180,78 @@ sh_binary {
 }
 
 sh_binary {
-    name: "modemlog.sh",
-    src: "bin/modemlog.sh",
+    name: "install-recovery.sh",
+    src: "bin/install-recovery.sh",
     vendor: true,
 }
 
-sh_binary {
-    name: "init.qcom.sensors.sh",
-    src: "bin/init.qcom.sensors.sh",
+// Init configuration files
+prebuilt_etc {
+    name: "init.target.rc",
+    src: "etc/init.target.rc",
+    sub_dir: "init/hw",
     vendor: true,
 }
 
-sh_binary {
-    name: "init.qti.display_boot.sh",
-    src: "bin/init.qti.display_boot.sh",
+prebuilt_etc {
+    name: "init.qcom.rc",
+    src: "etc/init.qcom.rc",
+    sub_dir: "init/hw",
     vendor: true,
 }
 
-sh_binary {
-    name: "aplog.sh",
-    src: "bin/aplog.sh",
+prebuilt_etc {
+    name: "init.qcom.factory.rc",
+    src: "etc/init.qcom.factory.rc",
+    sub_dir: "init/hw",
     vendor: true,
 }
 
-sh_binary {
-    name: "batterylogcontrol.sh",
-    src: "bin/batterylogcontrol.sh",
+prebuilt_etc {
+    name: "init.lenovo.common.rc",
+    src: "etc/init.lenovo.common.rc",
+    sub_dir: "init/hw",
     vendor: true,
 }
 
-sh_binary {
-    name: "init.mdm.sh",
-    src: "bin/init.mdm.sh",
+prebuilt_etc {
+    name: "init.lenovo.rc",
+    src: "etc/init.lenovo.rc",
+    sub_dir: "init/hw",
     vendor: true,
 }
 
-sh_binary {
-    name: "batterylog.sh",
-    src: "bin/batterylog.sh",
+prebuilt_etc {
+    name: "init.target.wigig.rc",
+    src: "etc/init.target.wigig.rc",
+    sub_dir: "init/hw",
     vendor: true,
 }
 
-sh_binary {
-    name: "copy_aplog.sh",
-    src: "bin/copy_aplog.sh",
+prebuilt_etc {
+    name: "init.qcom.usb.rc",
+    src: "etc/init.qcom.usb.rc",
+    sub_dir: "init/hw",
     vendor: true,
 }
 
-sh_binary {
-    name: "init.class_main.sh",
-    src: "bin/init.class_main.sh",
+prebuilt_etc {
+    name: "init.qti.ufs.rc",
+    src: "etc/init.qti.ufs.rc",
+    sub_dir: "init/hw",
     vendor: true,
 }
 
-sh_binary {
-    name: "init.qcom.post_boot.sh",
-    src: "bin/init.qcom.post_boot.sh",
+prebuilt_etc {
+    name: "init.lenovo.usb.configfs.rc",
+    src: "etc/init.lenovo.usb.configfs.rc",
+    sub_dir: "init/hw",
     vendor: true,
 }
 
-sh_binary {
-    name: "init.qti.media.sh",
-    src: "bin/init.qti.media.sh",
+// fstab
+prebuilt_etc {
+    name: "fstab.qcom",
+    src: "etc/fstab.qcom",
     vendor: true,
 }
-
-

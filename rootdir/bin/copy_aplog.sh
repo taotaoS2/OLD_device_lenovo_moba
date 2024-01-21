@@ -60,7 +60,7 @@ Log "Start copy_aplog"
 # temp modufy: sync with SecretCode
 sleep 3
 
-cd $APLOG_DIR && rm -fr gps recovery wlan
+cd $APLOG_DIR && rm -fr gps anr recovery wlan
 cat /proc/interrupts > $APLOG_DIR/interrupts.txt
 cat /proc/meminfo > $APLOG_DIR/meminfo.txt
 #cat /d/ion/heaps/system > $APLOG_DIR/ion_system.txt
@@ -120,6 +120,10 @@ if [ -e /d/le_rkm ]; then
     cat /d/le_rkm/sbl1_mesg > $APLOG_DIR/sbl1_mesg
     Log "Collecting sbl1_mesg done"
 fi
+
+# add for reboot log need by bsp
+PSTORE_DIR=/sys/fs/pstore
+[ -d $PSTORE_DIR ] && cp -a $PSTORE_DIR/ $APLOG_DIR/pstore
 
 BL_LOGFILE=$APLOG_DIR/BL
 date  >> $BL_LOGFILE
